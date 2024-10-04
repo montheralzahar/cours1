@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'home page';
+});
+Route::get('/contact', function () {
+    return 'contact page';
 });
 
-Route::get('/about', function () {
-    return view('welcome');
-});
+
