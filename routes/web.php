@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\SecController;
 
 // Route::get('/', function () {
 //     return 'home page';
@@ -65,11 +67,16 @@ Route::get('/sessions/{name?}/{type?}', function ($name,$type="online") {
 });
 
 
-Route::get('/', function () {
-    $link=route('about');
-    return "<a href='$link'> About Us</a>";
-});
+// Route::get('/', function () {
+//     $link=route('about');
+//     return "<a href='$link'> About Us</a>";
+// });
 
 Route::get('/about-us',function(){
     return "<h1>About Us</h1>";
 })->name('about');
+
+
+Route::get('/',[MainController::class,'index']);
+
+Route::get('/Home',[SecController::class,'home']);
