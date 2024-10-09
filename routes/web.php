@@ -79,4 +79,4 @@ Route::get('/about-us',function(){
 
 Route::get('/',[MainController::class,'index']);
 
-Route::get('/Home',[SecController::class,'home']);
+Route::get('/Home',[SecController::class,'home'])->nam('home');
